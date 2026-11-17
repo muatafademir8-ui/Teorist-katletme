@@ -1,0 +1,16 @@
+name: PSP Derle
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: pspdev/pspdev:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Derle
+        run: make
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AcikDunya-EBOOT
+          path: EBOOT.PBP
