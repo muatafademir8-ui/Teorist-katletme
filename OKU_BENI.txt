@@ -1,0 +1,32 @@
+=== PSP / PPSSPP AK-47 DESERT OPS 3D KURULUM VE DERLEME REHBERI ===
+
+ONEMLI BILGI:
+Web tarayicilari icin yazilan HTML/Three.js kodlari PPSSPP'de dogrudan calismaz.
+PPSSPP (ve gercek PSP konsollari) MIPS islemci mimarisi icin C/C++ ile derlenmis
+'EBOOT.PBP' veya '.ISO' dosyalarini calistirir.
+
+Bu pakette PSP'nin donanim hizlandirmali 3D grafik motoru (PSP GU / GUM) icin
+sifirdan C dilinde yazilmis kaynak kodlar yer almaktadir.
+
+1. PAKET ICERIGI:
+   - main.c   : PSP GU 3D motoru, AK-47 modeli, nişan alma (ADS) ve dusman AI kodlari
+   - Makefile : PSPSDK ile EBOOT.PBP uretmek icin derleme dosyasi
+
+2. EBOOT.PBP NASIL OLUSTURULUR? (PC veya Linux/WSL Uzerinden):
+   a) Bilgisayariniza ucretsiz 'pspdev' (PSPSDK) aracini kurun (veya Docker uzerinden
+      'pspdev/pspdev' imajini kullanin).
+   b) Terminali bu klasorun icinde acin ve su komutu yazin:
+      make
+   c) Islem bittiginde klasorde 'EBOOT.PBP' dosyasi olusacaktir.
+
+3. PPSSPP'YE ATMA VE OYNAMA:
+   - Telefonunuzda veya PC'nizde 'PSP/GAME/AK47_3D/' klasorunu olusturun.
+   - Olusan 'EBOOT.PBP' dosyasini bu klasorun icine kopyalayin.
+   - PPSSPP'yi acin, Oyunlar -> Homebrew & Demolar bolumunden oyunu baslatin!
+
+4. PSP / PPSSPP KONTROLLERI:
+   - Yon Tuslari (D-Pad) : Ileri, Geri, Saga, Sola Hareket
+   - Analog Cubuk        : Etrafa Bakma ve Nisan Alma
+   - L Tusu              : Gez-Arpacik Nisan Alma (ADS)
+   - R Tusu              : AK-47 Ates Etme
+   - Kare (Square) Tusu  : Sarjor Degistirme
